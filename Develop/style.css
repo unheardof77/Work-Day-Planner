@@ -13,6 +13,13 @@ textarea {
   padding: 10px;
 }
 
+.customInput{
+  height: 10%;
+}
+.customBtn {
+  height: 10%;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;

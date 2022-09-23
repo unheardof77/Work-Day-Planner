@@ -1,38 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
-    </header>
-    <div class="container">
-      <!-- Timeblocks go here -->
-    </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge" />
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet"
+    href="style.css" />
+  <script defer
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"></script>
+  <script defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script defer
+    src="./script.JS"></script>
+  <title>Work Day Scheduler</title>
+</head>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  </body>
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay"
+      class="lead"></p>
+  </header>
+  <div class="container d-flex">
+    <Section class="col-3 p-0">
+      <h2 class="h-10">8:00 AM</h2>
+      <h2 class="h-10">9:00 AM</h2>
+      <h2 class="h-10">10:00 AM</h2>
+      <h2 class="h-10">11:00 AM</h2>
+      <h2 class="h-10">12:00 PM</h2>
+      <h2 class="h-10">1:00 pm</h2>
+      <h2 class="h-10">2:00 PM</h2>
+      <h2 class="h-10">3:00 PM</h2>
+      <h2 class="h-10">4:00 PM</h2>
+      <h2 class="h-10">5:00 PM</h2>
+    </Section>
+    <section class="col-6 h-10 p-0">
+      <input id="input8" class="w-100 customInput">
+      <input id="input9" class="w-100 customInput">
+      <input id="input10" class="w-100 customInput">
+      <input id="input11" class="w-100 customInput">
+      <input id="input12" class="w-100 customInput">
+      <input id="input1" class="w-100 customInput">
+      <input id="input2" class="w-100 customInput">
+      <input id="input3" class="w-100 customInput">
+      <input id="input4" class="w-100 customInput">
+      <input id="input5" class="w-100 customInput">
+    </section>
+    <section class="col-3 p-0">
+      <button id="btn8" class="customBtn w-100"></button>
+      <button id="btn9" class="customBtn w-100"></button>
+      <button id="btn10" class="customBtn w-100"></button>
+      <button id="btn11" class="customBtn w-100"></button>
+      <button id="btn12" class="customBtn w-100"></button>
+      <button id="btn1" class="customBtn w-100"></button>
+      <button id="btn2" class="customBtn w-100"></button>
+      <button id="btn3" class="customBtn w-100"></button>
+      <button id="btn4" class="customBtn w-100"></button>
+      <button id="btn5" class="customBtn w-100"></button>
+    </section>
+  </div>
+
+
+</body>
+
 </html>
