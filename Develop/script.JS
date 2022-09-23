@@ -1,6 +1,7 @@
-/* 
+let date = moment().format("dddd, Do");
+$(`#currentDay`).text(date);
 
-color code timeblocks*/
+let currentTime = parseInt(moment().format("H"));
 
 function saveButton() {
     let input8 = $(`#8`).val();
@@ -40,11 +41,6 @@ $(`#14`).val(localStorage.getItem("input2"));
 $(`#15`).val(localStorage.getItem("input3"));
 $(`#16`).val(localStorage.getItem("input4"));
 $(`#17`).val(localStorage.getItem("input5"));
-
-let date = moment().format("dddd, Do");
-$(`#currentDay`).text(date);
-
-let currentTime = parseInt(moment().format("H"));
 
 $(`input`).each(function() {
     if (parseInt($(this).attr(`id`)) === currentTime){
