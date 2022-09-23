@@ -1,30 +1,45 @@
-/* make input saveable when button is pressed
-Make current day display at top of page
+/* 
+
 color code timeblocks*/
 
-const input8 = $(`input8`).val()
-const input9 = $(`input9`)
-const input10 = $(`input10`)
-const input11 = $(`input11`)
-const input12 = $(`input12`)
-const input1 = $(`input1`)
-const input2 = $(`input2`)
-const input3 = $(`input3`)
-const input4 = $(`input4`)
-const input5 = $(`input5`)
-
-function saveInput(){
-
+function saveButton() {
+    let input8 = $(`#input8`).val();
+    let input9 = $(`#input9`).val();
+    let input10 = $(`#input10`).val();
+    let input11 = $(`#input11`).val();
+    let input12 = $(`#input12`).val();
+    let input1 = $(`#input1`).val();
+    let input2 = $(`#input2`).val();
+    let input3 = $(`#input3`).val();
+    let input4 = $(`#input4`).val();
+    let input5 = $(`#input5`).val();
+    localStorage.setItem("input8", input8);
+    localStorage.setItem("input9", input9);
+    localStorage.setItem("input10", input10);
+    localStorage.setItem("input11", input11);
+    localStorage.setItem("input12", input12);
+    localStorage.setItem("input1", input1);
+    localStorage.setItem("input2", input2);
+    localStorage.setItem("input3", input3);
+    localStorage.setItem("input4", input4);
+    localStorage.setItem("input5", input5); 
 };
 
-$(`#btn8`).on("click", saveInput())
-l$(`#btn9`).on("click", saveInput())
-$(`#btn10`).on("click", saveInput())
-$(`#btn11`).on("click", saveInput())
-$(`#btn12`).on("click", saveInput())
-$(`#btn1`).on("click", saveInput())
-$(`#btn2`).on("click", saveInput())
-$(`#btn3`).on("click", saveInput())
-$(`#btn4`).on("click", saveInput())
-$(`#btn5`).on("click", saveInput())
+$("#btn8, #btn9, #btn10, #btn11, #btn12, #btn1, #btn2, #btn3, #btn4, #btn5").click(function (event) {
+    event.stopPropagation();
+    saveButton()
+});
 
+$(`#input8`).val(localStorage.getItem("input8"));
+$(`#input9`).val(localStorage.getItem("input9"));
+$(`#input10`).val(localStorage.getItem("input10"));
+$(`#input11`).val(localStorage.getItem("input11"));
+$(`#input12`).val(localStorage.getItem("input12"));
+$(`#input1`).val(localStorage.getItem("input1"));
+$(`#input2`).val(localStorage.getItem("input2"));
+$(`#input3`).val(localStorage.getItem("input3"));
+$(`#input4`).val(localStorage.getItem("input4"));
+$(`#input5`).val(localStorage.getItem("input5"));
+
+let date = moment().format("dddd, Do");
+$(`#currentDay`).text(date)
