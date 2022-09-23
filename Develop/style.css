@@ -13,12 +13,10 @@ textarea {
   padding: 10px;
 }
 
-.customInput{
+.customInput, .customBtn{
   height: 10%;
 }
-.customBtn {
-  height: 10%;
-}
+
 
 .jumbotron {
   text-align: center;
@@ -34,7 +32,7 @@ textarea {
 
 .time-block {
   text-align: center;
-  border-radius: 15px;
+  
 }
 
 .row {
@@ -47,6 +45,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  height: 80px;
 }
 
 .past {

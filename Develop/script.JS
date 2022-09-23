@@ -3,16 +3,16 @@
 color code timeblocks*/
 
 function saveButton() {
-    let input8 = $(`#input8`).val();
-    let input9 = $(`#input9`).val();
-    let input10 = $(`#input10`).val();
-    let input11 = $(`#input11`).val();
-    let input12 = $(`#input12`).val();
-    let input1 = $(`#input1`).val();
-    let input2 = $(`#input2`).val();
-    let input3 = $(`#input3`).val();
-    let input4 = $(`#input4`).val();
-    let input5 = $(`#input5`).val();
+    let input8 = $(`#8`).val();
+    let input9 = $(`#9`).val();
+    let input10 = $(`#10`).val();
+    let input11 = $(`#11`).val();
+    let input12 = $(`#12`).val();
+    let input1 = $(`#13`).val();
+    let input2 = $(`#14`).val();
+    let input3 = $(`#15`).val();
+    let input4 = $(`#16`).val();
+    let input5 = $(`#17`).val();
     localStorage.setItem("input8", input8);
     localStorage.setItem("input9", input9);
     localStorage.setItem("input10", input10);
@@ -30,16 +30,28 @@ $("#btn8, #btn9, #btn10, #btn11, #btn12, #btn1, #btn2, #btn3, #btn4, #btn5").cli
     saveButton()
 });
 
-$(`#input8`).val(localStorage.getItem("input8"));
-$(`#input9`).val(localStorage.getItem("input9"));
-$(`#input10`).val(localStorage.getItem("input10"));
-$(`#input11`).val(localStorage.getItem("input11"));
-$(`#input12`).val(localStorage.getItem("input12"));
-$(`#input1`).val(localStorage.getItem("input1"));
-$(`#input2`).val(localStorage.getItem("input2"));
-$(`#input3`).val(localStorage.getItem("input3"));
-$(`#input4`).val(localStorage.getItem("input4"));
-$(`#input5`).val(localStorage.getItem("input5"));
+$(`#8`).val(localStorage.getItem("input8"));
+$(`#9`).val(localStorage.getItem("input9"));
+$(`#10`).val(localStorage.getItem("input10"));
+$(`#11`).val(localStorage.getItem("input11"));
+$(`#12`).val(localStorage.getItem("input12"));
+$(`#13`).val(localStorage.getItem("input1"));
+$(`#14`).val(localStorage.getItem("input2"));
+$(`#15`).val(localStorage.getItem("input3"));
+$(`#16`).val(localStorage.getItem("input4"));
+$(`#17`).val(localStorage.getItem("input5"));
 
 let date = moment().format("dddd, Do");
-$(`#currentDay`).text(date)
+$(`#currentDay`).text(date);
+
+let currentTime = parseInt(moment().format("H"));
+
+$(`input`).each(function() {
+    if (parseInt($(this).attr(`id`)) === currentTime){
+        $(this).addClass(`present`)
+    }else if(parseInt($(this).attr(`id`)) < currentTime){
+        $(this).addClass(`past`)
+    }else {
+        $(this).addClass(`future`)
+    }
+});
